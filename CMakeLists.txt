@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  geometry_msgs
   message_generation
 )
 
@@ -50,7 +51,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate messages in the 'msg' folder
 add_message_files(
    FILES
-   ArduinoCommand.msg
+   RobotCommand.msg
+   
 #   Message1.msg
 #   Message2.msg
 )
@@ -73,6 +75,7 @@ add_message_files(
 generate_messages(
   DEPENDENCIES
   std_msgs
+  geometry_msgs
 #   std_msgs
 )
 
@@ -108,7 +111,7 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES andrewbot_msgs
-  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
+  CATKIN_DEPENDS roscpp rospy std_msgs geometry_msgs message_runtime
 #  DEPENDS system_lib
 )
 
