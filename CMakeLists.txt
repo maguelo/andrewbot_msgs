@@ -52,7 +52,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
    FILES
    RobotCommand.msg
-   
+   ServoStatus.msg
 #   Message1.msg
 #   Message2.msg
 )
